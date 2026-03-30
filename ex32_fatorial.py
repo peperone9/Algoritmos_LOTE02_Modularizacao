@@ -1,21 +1,28 @@
 #32. Receba um número inteiro. Calcule e mostre o seu fatorial.
 
 #declarar
-i: int
 n: int = -1
 fat: int
 
-#inicio
-i = 1
-fat = 1
 
-while(n < 0):
-	n = int(input("Informe um número inteiro positivo para fatorial: "))
+def ler_fatorial(n) -> int:
+	while(n < 0):
+		n = int(input("Informe um número inteiro positivo para fatorial: "))
+	return n 
 
-while(i <= n):
-	fat *= i
-	i += 1
+def fatorial(n: int) -> int:
+	fat = 1
+	i = 1
+	while(i <= n):
+		fat *= i
+		i += 1
+	return fat
 
-print(str(n) + "! =", fat)
-#fim
+def main():
+	global n
+	global fat 
 
+	n = ler_fatorial(n)
+	fat = fatorial(n)
+	print(str(n) + "! =", fat)
+main()

@@ -2,13 +2,17 @@
 
 #declarar
 i: int
+def quadrados(n, intervalo):
+	i = n 
+	while(i <= intervalo):
+		print(i*i)
+		i += 1
+	print()
+	#fim
 
-#inicio
-i = 10
-
-while(i <= 150):
-	print(i*i)
-	i += 1
-print()
-#fim
+def main():
+	global i 
+	i = 10
+	quadrados(i, 150)
+main()
 
