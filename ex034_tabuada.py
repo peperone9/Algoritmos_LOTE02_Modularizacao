@@ -5,11 +5,19 @@
 i: int
 n: int
 
-#inicio
-i = 0
-n = int(input("Numero da tabuada: "))
 
-while(i <= 10):
-	print(n,"x",i,"=",n*i)
-	i += 1
+
+
+def tabuada():
+	global n 
+	#inicio
+	i = 0
+	n = int(input("Numero da tabuada: "))
+	while(i <= 10):
+		print(n,"x",i,"=",n*i)
+		i += 1
 #fim
+def main():
+	tabuada()
+main()
+
